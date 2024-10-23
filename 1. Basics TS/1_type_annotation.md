@@ -190,5 +190,3 @@ greet("Mahesh", "Good morning"); // Outputs: Good morning, Mahesh
 ```
 
 ---
-
-This structure guides you from basic types to advanced techniques, ensuring you understand how to effectively use TypeScript's type system.
