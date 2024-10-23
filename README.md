@@ -1,181 +1,71 @@
-# **Beginner: Understanding the Basics**
+# TypeScript
 
-## 1. **Getting Started with TypeScript**
+This guide provides an overview of TypeScript fundamentals and advanced topics, helping you build a solid foundation in TypeScript while preparing you for real-world applications.
 
-- **Goal:** Understand what TypeScript is and how it differs from JavaScript.
-- **Official Guide: [TypeScript in 5 Minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)**
-- Key topics:
-  - Installing TypeScript
-  - Setting up a basic TypeScript project
-  - TypeScript vs. JavaScript: Static typing, type inference, and transpiling
+## 1. TypeScript Basics
 
-## 2. **Type Annotations & Basic Types**
+### Type Annotations
 
-- **Goal:** Learn how to use TypeScript's type system effectively.
-- **Official Guide: [Basic Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)**
-- Key topics:
-  - Type annotations (`string`, `number`, `boolean`, etc.)
-  - Union and intersection types
-  - Arrays, tuples, enums, and literal types
+- Explicitly defining types for variables, function parameters, and return types.
+- Understanding primitive types, arrays, tuples, and enums.
 
----
+### Type Inference
 
-# **Intermediate: Building Strong Foundations**
+- How TypeScript automatically infers types based on values assigned.
 
-## 3. **Interfaces & Type Aliases**
+### Any, Unknown, Never Types
 
-- **Goal:** Understand how to define and enforce the shape of data using TypeScript.
-- **Official Guide: [Interfaces](https://www.typescriptlang.org/docs/handbook/2/objects.html)**
-- Key topics:
-  - Interfaces vs. type aliases
-  - Optional properties and read-only properties
-  - Extending interfaces
+- Understanding the implications of using `any` and the advantages of `unknown`.
+- Using `never` for functions that never return (e.g., throwing errors, infinite loops).
 
-## 4. **Functions in TypeScript**
+### Interfaces and Type Aliases
 
-- **Goal:** Write and type-check complex functions.
-- **Official Guide: [Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)**
-- Key topics:
-  - Function types
-  - Optional and default parameters
-  - Rest parameters and overloading functions
+- Defining and implementing interfaces for object shapes.
+- Using type aliases to create custom types.
 
-## 5. **Classes in TypeScript**
+## 2. Advanced TypeScript Concepts
 
-- **Goal:** Learn TypeScript’s object-oriented programming features.
-- **Official Guide: [Classes](https://www.typescriptlang.org/docs/handbook/2/classes.html)**
-- Key topics:
-  - Class properties and methods
-  - Inheritance and access modifiers (`public`, `private`, `protected`)
-  - Abstract classes
+### Generics
 
-## 6. **Generics**
+- Creating functions and classes that work with any type.
+- Understanding the benefits of using generics for type safety.
 
-- **Goal:** Work with generic types for building reusable components.
-- **Official Guide: [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)**
-- Key topics:
-  - Generic functions and classes
-  - Constraints in generics
-  - Using generics in interfaces and type aliases
+### Utility Types
 
----
+- Using built-in utility types: `Partial`, `Required`, `Readonly`, `Record`, `Pick`, `Omit`.
+- Creating custom utility types.
 
-# **Advanced: Mastering TypeScript Features**
+### Mapped Types and Conditional Types
 
-## 7. **Advanced Types**
+- Defining types based on existing types and conditions.
+- Leveraging mapped types for transforming existing types.
 
-- **Goal:** Handle complex type scenarios.
-- **Official Guide: [Advanced Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)**
-- Key topics:
-  - Union types, intersection types, and type guards
-  - Conditional types (`T extends U ? X : Y`)
-  - Type mapping and type utilities (e.g., `Partial<T>`, `Readonly<T>`, etc.)
+## 3. Working with Classes in TypeScript
 
-## 8. **Modules and Namespaces**
+### Class Definitions
 
-- **Goal:** Organize and structure code using TypeScript's module system.
-- **Official Guide: [Modules](https://www.typescriptlang.org/docs/handbook/modules.html)**
-- Key topics:
-  - ES modules vs. CommonJS modules
-  - Import/export syntax
-  - Namespaces and declaration merging
+- Defining classes, constructors, and methods in TypeScript.
+- Using access modifiers: `public`, `private`, `protected`.
 
-## 9. **TypeScript Configuration (`tsconfig.json`)**
+### Inheritance and Interfaces
 
-- **Goal:** Master TypeScript configuration options to fine-tune the compiler’s behavior.
-- **Official Guide: [TSConfig Options](https://www.typescriptlang.org/tsconfig)**
-- Key topics:
-  - `compilerOptions` (e.g., `strict`, `target`, `module`, etc.)
-  - Project references for larger applications
-  - Path mapping for clean imports
+- Extending classes and implementing interfaces.
+- Understanding multiple inheritance and interface extension.
 
-## 10. **Declaration Files**
+## 4. Modules in TypeScript
 
-- **Goal:** Learn how to write declaration files (`.d.ts`) for existing JavaScript libraries.
-- **Official Guide: [Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)**
-- Key topics:
-  - Ambient declarations
-  - Module augmentation
-  - Writing types for third-party libraries (e.g., DefinitelyTyped)
+### ES6 Modules vs. Namespaces
 
-## 11. **TypeScript Compiler API**
+- Using `import` and `export` for modular programming.
+- Understanding the difference between ES6 modules and namespaces.
 
-- **Goal:** Leverage the TypeScript compiler for advanced use cases such as code transformations and custom linting.
-- **Official Guide: [TypeScript Compiler API](https://www.typescriptlang.org/docs/handbook/using-the-compiler-api.html)**
-- Key topics:
-  - Parsing and type-checking code
-  - Transforming AST (Abstract Syntax Tree)
-  - Building custom TypeScript tooling
+### Declaration Files
 
----
+- Writing and using `.d.ts` files for third-party libraries.
 
-# **Expert: Optimization & Tooling Integration**
+## 6. Decorators (Experimental)
 
-## 12. **Integrating TypeScript with Build Tools**
+### Class and Method Decorators
 
-- **Goal:** Efficiently bundle and transpile TypeScript in production environments.
-- **Official Guide: [Build Tools](https://www.typescriptlang.org/docs/handbook/integrating-with-build-tools.html)**
-- Key topics:
-  - Using TypeScript with Webpack, Rollup, and other bundlers
-  - Incremental compilation and watch mode
-  - Transpiling down to JavaScript with different targets (`ES6`, `ESNext`, etc.)
-
-## 13. **TypeScript and Frontend Frameworks**
-
-- **Goal:** Work with TypeScript in modern frontend frameworks like React, Angular, or Vue.
-- **Official Guide: [TypeScript with React](https://www.typescriptlang.org/docs/handbook/react.html)**
-- Key topics:
-  - TypeScript with JSX/TSX
-  - Typing props, state, and context in React
-  - Using TypeScript with Angular services and components
-
-## 14. **TypeScript and Backend Development**
-
-- **Goal:** Build scalable and maintainable backends using TypeScript.
-- **Official Guide: [Node.js with TypeScript](https://www.typescriptlang.org/docs/handbook/node.html)**
-- Key topics:
-  - TypeScript with Node.js (express, NestJS, etc.)
-  - Typing async functions and promises
-  - Handling errors with TypeScript
-
-## 15. **Testing in TypeScript**
-
-- **Goal:** Set up comprehensive testing for TypeScript projects.
-- **Official Guide: [Testing with TypeScript](https://www.typescriptlang.org/docs/handbook/testing.html)**
-- Key topics:
-  - Typing tests with Jest and Mocha
-  - Using `ts-jest` for TypeScript testing
-  - Typing mocks and spies in testing frameworks
-
----
-
-# **Expert Engineer: Best Practices and Contributions**
-
-## 16. **Advanced TypeScript Patterns**
-
-- **Goal:** Follow best practices and advanced patterns in TypeScript.
-- **Official Guide: [Design Patterns](https://www.typescriptlang.org/docs/handbook/design-patterns.html)**
-- Key topics:
-  - Dependency injection in TypeScript
-  - Decorators and metadata reflection
-  - Functional programming in TypeScript
-
-## 17. **Contributing to TypeScript**
-
-- **Goal:** Become an active contributor to the TypeScript community.
-- **Official Guide: [Contributing to TypeScript](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md)**
-- Key topics:
-  - Understanding the TypeScript source code
-  - Submitting pull requests to the TypeScript project
-  - Creating and contributing to DefinitelyTyped packages
-
-## 18. **Building TypeScript Libraries**
-
-- **Goal:** Create high-quality, type-safe libraries in TypeScript.
-- **Official Guide: [Library Publishing](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)**
-- Key topics:
-  - Publishing libraries with TypeScript
-  - Generating `.d.ts` files for consumers
-  - Ensuring type safety for library users
-
----
+- Understanding the decorator pattern and its use cases.
+- Implementing decorators for classes, methods, and properties.
