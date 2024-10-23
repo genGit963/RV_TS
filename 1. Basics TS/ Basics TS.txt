@@ -1,0 +1,15 @@
+1.  ------------------------ TypeScript Basics ------------------------
+    - Type Annotations
+      - Explicitly defining types for variables, function parameters, and return types
+      - Understanding primitive types, arrays, tuples, and enums
+
+    - Type Inference
+      - How TypeScript automatically infers types based on values assigned
+
+    - Any, Unknown, Never Types
+      - Understanding the implications of using `any` and the advantages of `unknown`
+      - Using `never` for functions that never return (throwing errors, infinite loops)
+
+    - Interfaces and Type Aliases
+      - Defining and implementing interfaces for object shapes
+      - Using type aliases to create custom types
