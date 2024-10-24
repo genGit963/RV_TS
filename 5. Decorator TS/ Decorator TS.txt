@@ -1,0 +1,4 @@
+5.  ------------------------ Decorators (Experimental) ------------------------ 
+    - Class and Method Decorators
+      - Understanding the decorator pattern and its use cases
+      - Implementing decorators for classes, methods, and properties
