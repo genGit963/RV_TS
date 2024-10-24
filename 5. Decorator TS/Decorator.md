@@ -2,7 +2,7 @@
 
 #### Overview:
 
-In TypeScript, decorators are special types of declarations that can be attached to classes, methods, properties, or parameters. They provide a way to add metadata, modify behavior, or extend functionality without altering the actual code logic. Understanding the decorator pattern and its use cases will allow you to harness the power of metaprogramming in TypeScript to create cleaner, more maintainable code.
+In TypeScript, decorators are `special types of declarations that can be attached to classes, methods, properties, or parameters`. They <u>provide a way to add metadata, modify behavior, or extend functionality without altering the actual code logic</u>. Understanding the decorator pattern and its use cases will allow you to harness the power of metaprogramming in TypeScript to create cleaner, more maintainable code.
 
 #### **Table of Contents:**
 
