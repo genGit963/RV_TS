@@ -1,10 +1,10 @@
-### TypeScript Class and Method Decorators: A Comprehensive Guide
+## TypeScript Class and Method Decorators: A Comprehensive Guide
 
-#### Overview:
+## Overview:
 
 In TypeScript, decorators are `special types of declarations that can be attached to classes, methods, properties, or parameters`. They <u>provide a way to add metadata, modify behavior, or extend functionality without altering the actual code logic</u>. Understanding the decorator pattern and its use cases will allow you to harness the power of metaprogramming in TypeScript to create cleaner, more maintainable code.
 
-#### **Table of Contents:**
+## **Table of Contents:**
 
 1. Introduction to Decorators
    - What are Decorators?
@@ -31,19 +31,19 @@ In TypeScript, decorators are `special types of declarations that can be attache
 
 ---
 
-### 1. **Introduction to Decorators**
+## 1. **Introduction to Decorators**
 
-#### What are Decorators?
+## What are Decorators?
 
-Decorators are functions that take the target (class, method, property) as an argument and allow you to modify or enhance it. They are widely used in frameworks like Angular to handle things like dependency injection and routing.
+`Decorators` are `functions that take the target (class, method, property)` as an `argument` and `allow you to modify or enhance it`. They are widely used in frameworks like `Angular` to handle things like dependency `injection and routing`.
 
-#### Why Use Decorators?
+## Why Use Decorators?
 
 - **Separation of Concerns**: Keep logic such as logging, validation, or authorization outside the main code logic.
 - **Code Reusability**: Decorators allow you to write once, reuse everywhere.
 - **Clean and Scalable Code**: They help in reducing code duplication by modularizing logic.
 
-#### Enabling Decorators in TypeScript
+## Enabling Decorators in TypeScript
 
 To use decorators, you need to enable the feature in your `tsconfig.json`:
 
@@ -56,13 +56,13 @@ To use decorators, you need to enable the feature in your `tsconfig.json`:
 
 ---
 
-### 2. **Understanding the Decorator Pattern**
+## 2. **Understanding the Decorator Pattern**
 
-#### What is the Decorator Pattern?
+## What is the Decorator Pattern?
 
-The decorator pattern is a structural design pattern that allows behavior to be added to individual objects, statically or dynamically, without affecting the behavior of other objects from the same class.
+The decorator pattern is a `structural design pattern that allows behavior to be added` to individual `objects`, `statically` or `dynamically`, `without affecting the behavior of other objects from the same class`.
 
-#### Use Cases of the Decorator Pattern:
+## Use Cases of the Decorator Pattern:
 
 - **Logging**: Automatically log when a method is called.
 - **Validation**: Ensure certain conditions are met before a method executes.
@@ -70,11 +70,11 @@ The decorator pattern is a structural design pattern that allows behavior to be 
 
 ---
 
-### 3. **Class Decorators**
+## 3. **Class Decorators**
 
-#### Implementing Class Decorators:
+## Implementing Class Decorators:
 
-A class decorator is a function that is applied to the constructor of the class. It can be used to modify or replace the class at runtime.
+A class decorator is a `function that is applied to the constructor of the class`. It can be used to `modify or replace the class at runtime`.
 
 **Syntax**:
 
@@ -84,7 +84,7 @@ function classDecorator(target: Function) {
 }
 ```
 
-#### Example: Logging Class Instantiation
+## Example: Logging Class Instantiation
 
 ```ts
 function LogClass(target: Function) {
@@ -102,11 +102,43 @@ const user = new User("Mahesh");
 
 In this example, whenever the `User` class is instantiated, a log is printed.
 
+```typescript
+// Learning the decorator
+
+function ClassDecorator(decorationOf: Function) {
+  console.log(`Class ${decorationOf.name} is created.`);
+}
+
+@ClassDecorator
+class User {
+  val: string;
+  constructor(val: string) {
+    this.val = val;
+  }
+
+  display() {
+    console.log("value: ", this.val);
+  }
+}
+
+const user = new User("mahesh: 99");
+console.log("user value: ", user.val);
+user.display();
+```
+
+```
+Output:
+
+[LOG]: "Class User is created."
+[LOG]: "user value: ",  "mahesh: 99"
+[LOG]: "value: ",  "mahesh: 99"
+```
+
 ---
 
-### 4. **Method Decorators**
+## 4. **Method Decorators**
 
-#### Implementing Method Decorators:
+## Implementing Method Decorators:
 
 A method decorator takes three arguments: the class prototype, the method name, and the property descriptor. It allows you to modify the behavior of methods.
 
@@ -122,7 +154,7 @@ function methodDecorator(
 }
 ```
 
-#### Example 1: Logging Method Calls
+## Example 1: Logging Method Calls
 
 ```ts
 function LogMethod(
@@ -150,7 +182,7 @@ math.add(5, 3);
 // Output: Method add is called with args: [5, 3]
 ```
 
-#### Example 2: Method Authorization
+## Example 2: Method Authorization
 
 ```ts
 function RequiresRole(role: string) {
@@ -188,9 +220,9 @@ admin.deleteUser("123");
 
 ---
 
-### 5. **Property Decorators**
+## 5. **Property Decorators**
 
-#### Implementing Property Decorators:
+## Implementing Property Decorators:
 
 A property decorator can be used to modify or provide additional behavior when a property is set or retrieved.
 
@@ -202,7 +234,7 @@ function propertyDecorator(target: Object, propertyKey: string | symbol) {
 }
 ```
 
-#### Example: Default Value Property
+## Example: Default Value Property
 
 ```ts
 function DefaultValue(defaultValue: any) {
@@ -233,9 +265,9 @@ console.log(settings.theme); // Output: dark
 
 ---
 
-### 6. **Advanced Use Cases**
+## 6. **Advanced Use Cases**
 
-#### Applying Multiple Decorators:
+## Applying Multiple Decorators:
 
 Multiple decorators can be stacked on a single class or method by applying them one after another.
 
@@ -245,17 +277,17 @@ Multiple decorators can be stacked on a single class or method by applying them 
 class MultiDecoratedClass {}
 ```
 
-#### Composable Decorators:
+## Composable Decorators:
 
 Decorators can be composed by returning a new decorator from within a decorator function.
 
-#### Metadata Reflection with Decorators:
+## Metadata Reflection with Decorators:
 
 TypeScript provides the `reflect-metadata` library to inspect metadata at runtime, enhancing the power of decorators.
 
 ---
 
-### 7. **Conclusion and Best Practices**
+## 7. **Conclusion and Best Practices**
 
 - Use decorators to separate cross-cutting concerns (like logging and validation).
 - Keep decorators simple and focused on one task.
